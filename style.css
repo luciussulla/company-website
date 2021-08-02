@@ -82,7 +82,7 @@
 }
 /* services */
 #services {
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(img/warszawa.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(img/konf1.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -683,6 +683,7 @@ blockquote::before {
   margin-bottom: 20px;
   max-width: 1400px;
   margin: 0 auto 20px;
+	font-family: 'Open Sans', sans-serif;
 }
 .portfolio .project:nth-of-type(odd) {
   background-color: #ababab;
