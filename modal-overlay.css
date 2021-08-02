@@ -1,0 +1,39 @@
+/* 
+<div class="modal-overlay js-modal-overlay">
+<p class="modal-overlay-p">Nie przeność konferencji</p>
+<p class="modal-overlay-p">Zorganizuj ją online!</p>
+</div>
+*/ 
+.modal-overlay {
+    top:0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    position: fixed; 
+    background: rgba(0,0,0,.8); 
+}
+
+.modal-overlay .inside-overlay {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 800px; 
+    height: 600px; 
+    background-color: rgba(0,0,0,.8);
+    border: 5px solid #fff; 
+    border-radius: 10px; 
+    text-align: center; 
+}
+
+
+.modal-overlay .inside-overlay .modal-overlay-p {
+    margin-top: 30px; 
+    font-size: 3rem; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #fff;  
+}
+
+.non-visible {
+    display: none;
+}

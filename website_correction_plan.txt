@@ -1,0 +1,64 @@
+
+1. Korekta językowa teksów i dopisanie tego co trzeba
+
+2. Korekta ikony ucha 
+
+3. Dodać sekcję o tłumaczeniu online w głównym tekscie pod sliderem oraz do jakiegoś nagłówka w sliderze
+
+<div class="about">
+        <h2>Tłumaczenie symultaniczne Szczytu Bałkańskiego</h2>
+        <p>Jednym z ciekawszych realizacji, podczas których mieliśmy przyjemność wykonywać tłumaczenie symultaniczne to szczyt bałkański. Tłumaczyliśmy symultanicznie Kanclerz Angelę Merkel oraz Mateusza Morawieckiego.
+        </p>
+      </div>
+    </div>
+    <div class="project clearfix">
+      <div class="web">
+        <img class="a" src="img/paiih.png" alt="wizyta studyjna tlumaczenie">
+      </div>
+      <div class="about">
+        <h2>Konsekutywnie podczas misji gospodarczej</h2>
+        <p>Dwukrotnie udało nam się realizować projekt z Polską Agencję Inwestycji i Handlu. Przedsięwzięcie polegało na wizytach studyjnych w różnych miastach i ośrodkach przemysłowych, często stanowiących klastry branżowe. Tłumaczenia konsekutywne oraz towarzyszące były wykonywane najczęściej w fabrykach oraz siedzibach firm, podczas obchodów placówek lub spotkań z zarządami poszczególnych firm. Jedna z wizyt odbyła się do klastra meblowego na południu wielkopolski, jeszcze inna polegała na zwiedzaniu największych fabryk i interesariuszy klastra lotniczego w woj. podkarpackim.
+        </p>
+      </div>
+    </div>
+    <div class="project clearfix">
+      <div class="web">
+        <img src="img/uniwersytet.jpg" alt="symultaniczne konferencja 3 tlumaczenie">
+      </div>
+      <div class="about">
+        <h2>Realizacje symultaniczne w placówkach Akademickich </h2>
+        <p> Gościmy regularnie w <em>placówkach akademickich w Warszawie, Poznaniu, Gdańsku</em> ale nie tylko i jesteśmy gotowi na nowe wyzwania, na terenie całego kraju. Podczas naszych wizyt na uniwersytetach i akademiach tłumaczymy otwarcia roków akademickich, debaty i panele dyskusyjne. 
+        </p>
+      </div>
+    </div>
+    <div class="project clearfix">
+      <div class="web">
+        <img src="img/kongres.jpg" alt="konferencja 2 tlumaczenie">
+      </div>
+      <div class="about">
+        <h2>Tłumaczenie towarzyszące podczas kongresu</h2>
+        <p>Podczas kongresu organizowanego dla rządu oraz głównych graczy polskiego biznesu mieliśmy okazję wykonywać <strong>tłumaczenie M. Morawieckiego</strong> oraz asysty tłumaczeniowej dla telewizji Polsat i polskiego radia. Inne zdjęcia z tej relacji mogą Państwo obejrzeć na naszej stronie. 
+        </p>
+      </div>
+    </div>
+
+    <div class="project clearfix">
+      <div class="web">
+        <img src="img/powiat.jpg" alt="konferencja 2 tlumaczenie">
+      </div>
+      <div class="about">
+        <h2>Wizyty zagranicznych gości w urzędach</h2>
+        <p>Co roku wykonujemy tłumaczenia symultaniczne oraz towarzyszące i konsekutywne podczas wizyt potomków mieszkańców Płocka i okolić. Wizyty polegają na rozmowach z władzami lokalnymi oraz zwiedzaniu lokalnych atrakcji turystycznych. Najczęściej tłumaczenia tego typu realizujemy na zestawach tour-guide. 
+        </p>
+      </div>
+    </div>
+
+    <div class="project clearfix">
+      <div class="web">
+        <img src="img/konf1.jpg" alt="konferencja 2 tlumaczenie">
+      </div>
+      <div class="about">
+        <h2>Prokety konsekutywne dla zarządów firm</h2>
+        <p>Wykonywaliśmy tłumaczenia symultaniczne podczas spotkania przedstawicieli firmy Nestle. Czas udało nam się spędzić bardzo sympatycznie podczas interesujących szkoleń.</p>
+      </div>
+    </div>
