@@ -8,7 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
@@ -92,11 +92,11 @@
       
           </div>
         </div>
+				
       </div><!-- slideshowzzz -->
     </div><!-- slider wrapper -->
   </section>
 
-  </section>
   <!-- about -->
   <section id="about">
     <div class="container">
@@ -235,7 +235,7 @@
       </div>
       <div class="about">
         <h2>Realizacje symultaniczne w placówkach Akademickich </h2>
-        <p> Pracowaliśmy placówkach akademickich w <em>Warszawie</em> (SGGW, SWPS), <em>Poznaniu </em>(WSJO, WSB), Gdańsku (AWFiS), <em>Wrocławiu</em> (UE)</em> i nie tylko i jesteśmy gotowi na nowe wyzwania, na terenie całego kraju. Podczas naszych wizyt na uniwersytetach i akademiach tłumaczymy otwarcia roków akademickich, debaty, konferencje, panele dyskusyjne, transmisje online. 
+        <p> Pracowaliśmy placówkach akademickich w <em>Warszawie</em> (SGGW, SWPS), <em>Poznaniu </em>(WSJO, WSB), Gdańsku (AWFiS), <em>Wrocławiu</em> (UE)i nie tylko i jesteśmy gotowi na nowe wyzwania, na terenie całego kraju. Podczas naszych wizyt na uniwersytetach i akademiach tłumaczymy otwarcia roków akademickich, debaty, konferencje, panele dyskusyjne, transmisje online. 
         </p>
       </div>
     </div>
@@ -262,6 +262,7 @@
     </div>
 
   </section>
+	
   <!-- Clients -->
   <section id="clients">
     <h4 class="clients-header">Zaufali nam</h4>
@@ -273,6 +274,7 @@
       </div>
     </div>
   </section>
+	
   <!-- Testimonials -->
   <section id="testimonials">
     <div class="container">
@@ -309,22 +311,31 @@
       </div>
     </div>
   </section>
+	
   <!-- GET IN TOUCH -->
   <section id="contact">
     <div class="container">
       <h1>KONTAKT</h1>
       <div class="row">
-        <div class="col-md-6 contact-info">
-          
+				
+        <div class="col-md-6 contact-info">  
           <div class="follow"><b>Email:</b><i class="fa fa-envelope-o"></i>jakub.proling@protonmail.com</div>
           <div class="follow"><b>Email:</b><i class="fa fa-envelope-o"></i>jakub.skrzeczkowski@gmail.com</div>
         </div>
+				
         <div class="col-md-6 contact-info">
           <div class="follow"><b>Telefon:</b><i class="fa fa-phone"></i>509 662 578</div>
           <div class="follow"><b>Telefon 2:</b><i class="fa fa-phone"></i>728 807 015</div>
-          <div class="follow"><b>Społeczność:   </b><a href="https://www.facebook.com/symultaniczni/"><i class="fab fa-facebook-f" style="color: #0069D9 !important"></i>  Facebook</a></div>
+          <div class="follow">
+						<b>Społeczność:   </b>
+						<a href="https://www.facebook.com/symultaniczni/">
+							<i class="fab fa-facebook-f" style="color: #0069D9 	!important"></i> Facebook
+						</a>
+					</div>
         </div>
-      </div>
+				
+			</div><!-- row --> 	
+     </div><!-- container-->
   </section>
   <!-- FOOTER ---->
   <section>
@@ -332,26 +343,7 @@
       <p style="padding-top: 30px;color:#777777;">Strona poświęcona tłumaczeniu symultanicznemu wykonana z pasją i <i class="fa fa-heart-o"></i> przez JS. Podoba się? Skontaktuj się z właścicielem, wykonamy taka dla Ciebie.</p>
     </div>
   </section>
-  <!-- Footer End -->
-  <!--
-<section class="gallery">
-  <div class="title">
-    <h1>Galeria</h1>
-  </div>
-  <div class="my-modal js-modal">
-    <img src="img/p1.jpg" alt="tlumaczenie1">
-  </div>
-  <div class="modal-overlay js-modal-overlay"></div>
-  <div class="images">
-    <a class="js-show-modal" href="img/konf1.jpg" ><img src="img/p1.jpg" alt="tlumaczenie0" ></a>
-    <a href="img/konf1.jpg" ><img src="img/p1.jpg" alt="tlumaczenie1" ></a>
-    <a href="img/konf1.jpg" ><img src="img/p1.jpg" alt="tlumaczenie2" ></a>
-    <a href="img/konf1.jpg" ><img src="img/p1.jpg" alt="tlumaczenie3" ></a>
-    <a href="img/konf1.jpg" ><img src="img/p1.jpg" alt="tlumaczenie4"></a>
-    <a href="img/konf1.jpg" ><img src="img/p1.jpg" alt="tlumaczenie5"></a>
-  </div>
-</section>
--->
+
   <script>
     $(document).ready(function () {
       $(".images a img").on("click", function (event) {
@@ -368,20 +360,7 @@
       });
       //js modal span - insert the foto switch off code
     });
-/*
-    $(document).ready(function(){
-      $('.js-show-modal').on("click", function(event){
-        event.preventDefault();
-        $('.js-modal').addClass('is-visible');
-        $('.js-modal-overlay').addClass('is-visible');
-      });
-    
-      $('.js-modal-overlay').on("click", function(event){
-        $('.js-modal').removeClass("is-visible");
-        $('.js-modal-overlay').removeClass("is-visible");
-      });
-    });
-    */
+
   </script>
 
 </body>
