@@ -397,6 +397,8 @@ blockquote::before {
   margin: 3px;
   color: red;
 }
+
+
 /* Slide replacement */
 
 .slide {
@@ -683,10 +685,10 @@ blockquote::before {
   margin: 0 auto 20px;
 }
 .portfolio .project:nth-of-type(odd) {
-  background-color: #555555;
+  background-color: #ababab;
 }
 .portfolio .project:nth-of-type(even) {
-  background-color: #007bff;
+  background-color: #101010;
 }
 
 @media (orientation: landscape) {
