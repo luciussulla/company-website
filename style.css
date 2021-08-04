@@ -574,10 +574,16 @@ blockquote::before {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  filter: grayscale(0.7); 
+  transition: all .5s linear;  
   /*
   display: block; position absolute juz nam zrobilo blokowy
   width: 100%; dzieki wysrodkowaniu juz nie potrzebujemy width 100
   */
+}
+.images img:hover {
+  filter: grayscale(0);
+  transform: translate(-50%, -50%) scale(1.2);
 }
 /* Modal */
 .my-modal {
@@ -645,12 +651,14 @@ blockquote::before {
   padding-bottom: 60px; 
   margin: 0 auto; 
 }
+
 /* New stuff */
 .portfolio {
-  background-color: black;
-  margin: 0;
+  background-color: #efefef;
+  margin: 0px;
   padding: 50px 0 30px;
-  width: 100%:
+  width: 100%;
+  color: #333; 
 }
 .portfolio h1{
   padding-top: 20px;
@@ -661,7 +669,6 @@ blockquote::before {
   width: 100%;
 }
 .portfolio .about {
-  color: white;
   font-family:'Saira';
   font-weight: normal;
   padding: 10px 20px 20px 0px;
@@ -673,23 +680,38 @@ blockquote::before {
   margin-bottom: 12px;
   padding-bottom: 6px;
   text-indent: 20px;
+  letter-spacing: .08rem;
+  border-bottom: 1px dashed #333; 
 }
 .portfolio .about p {
   font-size: 15px;
   padding-left: 20px;
   line-height: 200%;
+  letter-spacing: .08rem;
 }
 .portfolio .project {
   margin-bottom: 20px;
   max-width: 1400px;
-  margin: 0 auto 20px;
+  /* margin: 0 auto 20px; */
 	font-family: 'Open Sans', sans-serif;
 }
 .portfolio .project:nth-of-type(odd) {
-  background-color: #ababab;
+  background-color: #fff; 
 }
 .portfolio .project:nth-of-type(even) {
-  background-color: #101010;
+  background-color: #fff; 
+}
+
+.project .about {
+  transform: translateY(30%);
+}
+
+.web img {
+  filter: grayscale(0.7);
+  transition: all .5s ease; 
+}
+.web img:hover {
+  filter: grayscale(0);
 }
 
 @media (orientation: landscape) {
@@ -731,7 +753,7 @@ blockquote::before {
     font-size: 18px;
     padding-left: 40px;
   }
-  .portfolio . project {
+  .portfolio .project {
     margin-bottom: 40px;
   }
 }
