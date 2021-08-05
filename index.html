@@ -27,6 +27,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="./css/lightbox.min.css" rel="stylesheet" >
+
   <link rel="stylesheet" href="style.css">
 </head>
 	
@@ -200,12 +202,12 @@
     </div>
     <div class="modal-overlay js-modal-overlay"></div>
     <div class="images">
-      <a href="img/dendro.jpg"><img src="img/dendro.jpg" alt="tlumaczenie konferencyjne"></a>
-      <a href="img/dng.jpg"><img src="img/dng.jpg" alt="tlumacz symultaniczny warszawa"></a>
-      <a href="img/gdansk.jpg"><img src="img/gdansk.jpg" alt="konfrencja gdansk"></a>
-      <a href="img/powiat.jpg"><img src="img/powiat.jpg" alt="tlumaczenie w urzedzie"></a>
-      <a href="img/sggw.png"><img src="img/sggw.png" alt="konsekutywne"></a>
-      <a href="img/polsat.jpg"><img src="img/polsat.jpg" alt="poznan"></a>
+      <a href="img/dendro.jpg" data-lightbox="dendrologia"><img src="img/dendro.jpg" alt="tlumaczenie konferencyjne"></a>
+      <a href="img/dng.jpg"    data-lightbox="warszawa"><img src="img/dng.jpg" alt="tlumacz symultaniczny warszawa"></a>
+      <a href="img/gdansk.jpg" data-lightbox="gdansk"><img src="img/gdansk.jpg" alt="konfrencja gdansk"></a>
+      <a href="img/powiat.jpg" data-lightbox="urzad"><img src="img/powiat.jpg" alt="tlumaczenie w urzedzie"></a>
+      <a href="img/sggw.png"   data-lightbox="warszawa_sggw"><img src="img/sggw.png" alt="konsekutywne"></a>
+      <a href="img/polsat.jpg" data-lightbox="rzeszow"><img src="img/polsat.jpg" alt="poznan"></a>
     </div>
   </section>
 	
@@ -382,23 +384,23 @@
   </section>
 
   <script>
-    $(document).ready(function () {
-      $(".images a img").on("click", function (event) {
-        event.preventDefault();
-        var imgSource = event.target.src
-        $(".js-modal img").attr("src", imgSource);
-        $(".js-modal").addClass("is-visible");
-        $(".js-modal-overlay").addClass("is-visible");
-      })
-      $(".js-modal-overlay, .js-modal span, .js-modal img").on("click", function (event) {
-        event.preventDefault();
-        $(".js-modal").removeClass("is-visible");
-        $(".js-modal-overlay").removeClass("is-visible");
-      });
-      //js modal span - insert the foto switch off code
-      // transparent border on scroll 
+    // $(document).ready(function () {
+    //   $(".images a img").on("click", function (event) {
+    //     event.preventDefault();
+    //     var imgSource = event.target.src
+    //     $(".js-modal img").attr("src", imgSource);
+    //     $(".js-modal").addClass("is-visible");
+    //     $(".js-modal-overlay").addClass("is-visible");
+    //   })
+    //   $(".js-modal-overlay, .js-modal span, .js-modal img").on("click", function (event) {
+    //     event.preventDefault();
+    //     $(".js-modal").removeClass("is-visible");
+    //     $(".js-modal-overlay").removeClass("is-visible");
+    //   });
+    //   //js modal span - insert the foto switch off code
+    //   // transparent border on scroll 
       
-    });   
+    // });   
 
     let hamburger = document.querySelector('.navbar-button')
     let menu = document.querySelector('.my-ul-nav')
@@ -423,6 +425,7 @@
 
 
   </script>
+  <script src="./js/lightbox-plus-jquery.min.js"></script>
 
 </body>
 
