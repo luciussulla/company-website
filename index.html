@@ -8,8 +8,6 @@
 	<meta name=”keywords” content="Tłumaczenia Symultaniczne, Poznań, Wrocław, Tlumaczenia Ustne, Biuro Tłumaczeń, Tłumaczenia ustne, Tłumaczenia konferencyjne, symultaniczne, tłumaczenie, tłumaczenia, Tłumaczenia konsekutywne, tłumaczenia angielski Poznań, Poznań tłuamczenia angielski, poznań, angielski">
 
 	<title>Tłumaczenia Symultaniczne Ustne Poznań | Tłumaczenie Konferencyjne</title>
-	
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
  
@@ -29,38 +27,42 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 	
 <body>
   <!-- Navigation bar -->
-  <section id="nav-bar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div id="my-navbar">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> get rid of this -->
+
       <a class="navbar-brand" href="#"><img src="img/logo.png" style="height:60px;"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+      <ul class="my-ul-nav">
+        <li class="my-nav-li">
+          <a  class="my-nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="my-nav-li">
+          <a  class="my-nav-link" href="#about">O nas</a>
+        </li>
+        <li class="my-nav-li">
+          <a  class="my-nav-link" href="#portfolio">Realizowane projekty</a>
+        </li>
+        <li class="my-nav-li">
+          <a  class="my-nav-link" href="#services">Tłumaczenia - oferta</a>
+        </li>
+        <li class="my-nav-li">
+          <a class="my-nav-link" href="#contact">Kontakt</a>
+        </li>
+      </ul>
+
+      <button class="navbar-button">
+        <span class="my-bar"></span>
+        <span class="my-bar"></span>
+        <span class="my-bar"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a  class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a  class="nav-link" href="#about">O nas</a>
-          </li>
-          <li class="nav-item active">
-            <a  class="nav-link" href="#portfolio">Realizowane projekty</a>
-          </li>
-          <li class="nav-item">
-            <a  class="nav-link" href="#services">Tłumaczenia - oferta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Kontakt</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </section>
+
+    <!-- </nav> -->
+  </div>
 	
   <!-- replacement slider -->
   <section>
@@ -397,6 +399,29 @@
       // transparent border on scroll 
       
     });   
+
+    let hamburger = document.querySelector('.navbar-button')
+    let menu = document.querySelector('.my-ul-nav')
+    let navbar = document.querySelector('#my-navbar')
+    console.log(hamburger)
+    console.log(menu)
+    console.log(navbar)
+
+    hamburger.addEventListener('click', ()=> {
+      console.log("clicked")
+      menu.classList.toggle('hide')
+    })
+
+    window.addEventListener('scroll', ()=> {
+      console.log(window.scrollY)
+      if(window.scrollY>150) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled')
+      }
+    })
+
+
   </script>
 
 </body>

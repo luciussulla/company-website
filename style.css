@@ -8,15 +8,12 @@
   clear: both;
   display: block;
 }
-
+/* 
+OLD NAVBAR 
 #nav-bar {
   position: sticky;
   top: 0;
   z-index: 10;
-}
-
-#nav-bar.transparent{
-  background-color: rgba(0,0,0,0.8);
 }
 
 .navbar-brand img {
@@ -43,6 +40,137 @@
   color: #555!important;
   font-weight: 600;
   font-size: 16px;
+} */
+
+/* NEW NAVBAR */ 
+#my-navbar {
+  position: relative; 
+  width: 100%; 
+  position: fixed; 
+  min-height: 80px; 
+  background-color: #eee;
+  color: #333; 
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  z-index: 10;
+  padding: 0 100px 0 80px; 
+  transition: all .4s ease;
+  /* border: 1px solid red;  */
+}
+
+#my-navbar.scrolled {
+  opacity: .9; 
+  transform: scale(.9);
+}
+
+.navbar-brand img {
+  height: 42px;
+}
+
+.navbar-button {
+  width: 30px; 
+  height: 25px; 
+  border: none; 
+  background-color: transparent;
+  position: absolute;
+  top: 1.2rem; 
+  right: 1.2rem; 
+  outline: transparent !important;
+
+  display: none; 
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+.navbar-button .my-bar {
+  width: 100%; 
+  border-radius: 10px; 
+  background-color: #333; 
+  height: 4px; 
+}
+
+.my-ul-nav {
+  display: flex; 
+  list-style-type: none;
+ 
+}
+
+.my-ul-nav li {
+  /* border: 1px solid red; */
+  padding: 0 7px;  
+}
+
+.my-ul-nav li .my-nav-link {
+  text-decoration: none;
+  color: #333 !important; 
+  text-transform: uppercase;
+}
+
+.my-ul-nav li .my-nav-link:hover {
+  color: #fff !important; 
+}
+
+@media (max-width: 900px) {
+
+  #my-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 0 0;  
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  }
+
+  .navbar-brand img {
+    margin-top: 12px;
+  }
+
+  .navbar-button {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+  }
+   
+  .my-ul-nav {
+    flex-direction: column; 
+    width: 100%; 
+    height: 220px; 
+    transition: all .3s ease; 
+    overflow: hidden;  
+  }
+
+  .my-ul-nav.hide {
+    height: 0px; 
+  }
+
+
+
+  .my-ul-nav {
+    align-items: center; 
+    /* border: 1px solid red;  */
+  }
+
+  .my-ul-nav li {
+    padding: 10px; 
+    width: 100%; 
+    text-align: center; 
+  } 
+
+  .my-ul-nav li:hover {
+    background-color: #bcbcbc;
+  } 
+
+  .my-ul-nav li .my-nav-link:hover {
+    color: #333 !important; 
+  }
+
+  .navbar-brand img {
+    transform: translateX(10px);
+  }
+
+
+
 }
 
 /* slider */
