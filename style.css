@@ -50,7 +50,7 @@ OLD NAVBAR
   min-height: 80px; 
   background-color: #eee;
   color: #333; 
-  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 
   display: flex; 
   align-items: center; 
@@ -95,6 +95,7 @@ OLD NAVBAR
 .my-ul-nav {
   display: flex; 
   list-style-type: none;
+  margin-bottom: 0px !important; 
  
 }
 
@@ -119,7 +120,7 @@ OLD NAVBAR
     flex-direction: column;
     align-items: center;
     padding: 0 0 0 0;  
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+
   }
 
   .navbar-brand img {
@@ -142,9 +143,7 @@ OLD NAVBAR
 
   .my-ul-nav.hide {
     height: 0px; 
-  }
-
-
+  } 
 
   .my-ul-nav {
     align-items: center; 
@@ -168,9 +167,6 @@ OLD NAVBAR
   .navbar-brand img {
     transform: translateX(10px);
   }
-
-
-
 }
 
 /* slider */
@@ -691,21 +687,28 @@ blockquote::before {
   right:5%;
   bottom: 5%;
   left: 5%;
+  /* border: 1px solid red;  */
 }
 .gallery a {
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
   position: relative;
   flex-basis: calc(33% - 40px);
   flex-grow: 1; /*Jesli jest wolna przestrzen to powieksz te elementy */
   margin: 0 20px;
   overflow: hidden;
-  height: 40%;
+  height: 200px; 
+  /* border: 1px solid red;  */
+  display: block; 
 }
+
 .images img {
   position: absolute;
-  top: 50%;
+  display: block; 
+  object-fit: cover; 
+  height: 200px; 
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   width: 100%;
   filter: grayscale(0.7); 
   transition: all .5s linear;  
@@ -716,7 +719,7 @@ blockquote::before {
 }
 .images img:hover {
   filter: grayscale(0);
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: scale(1.2);
 }
 /* Modal */
 .my-modal {
@@ -768,11 +771,8 @@ blockquote::before {
   opacity: 0.4;
   visibility: visible;
 }
-
 /* Clients */ 
-#clients {
-  width: 100%; 
-}
+
 #clients h4 {
   margin-top: 100px; 
   text-align: center;
@@ -780,9 +780,13 @@ blockquote::before {
   font-size: 40px;
 }
 .clients-image {
+  width: 800px;
   padding-top: 120px; 
   padding-bottom: 60px; 
   margin: 0 auto; 
+}
+.clients-image img {
+  width: 100%; 
 }
 
 /* New stuff */
@@ -794,19 +798,38 @@ blockquote::before {
   color: #333; 
 }
 .portfolio h1{
-  padding-top: 20px;
+  padding: 50px; 
   background-color: white;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
+
+.portfolio .project {
+  margin-bottom: 40px;
+}
+.portfolio .project:nth-of-type(odd) {
+  background-color: #fff; 
+}
+.portfolio .project:nth-of-type(even) {
+  background-color: #fff; 
+}
+
 .portfolio .web img {
   width: 100%;
+  filter: grayscale(0.7);
+  transition: all .5s ease; 
 }
+
+.web img:hover {
+  filter: grayscale(0);
+}
+
 .portfolio .about {
   font-family:'Saira';
   font-weight: normal;
-  padding: 10px 20px 20px 0px;
+  padding: 25px 20px 20px 0px;
   text-align: left;
 }
+
 .portfolio .about h2{
   font-size: 18px;
   border-bottom: 2px solid white;
@@ -818,36 +841,38 @@ blockquote::before {
 }
 .portfolio .about p {
   font-size: 15px;
-  padding-left: 20px;
-  line-height: 200%;
-  letter-spacing: .08rem;
-}
-.portfolio .project {
-  margin-bottom: 20px;
-  max-width: 1400px;
-  /* margin: 0 auto 20px; */
-	font-family: 'Open Sans', sans-serif;
-}
-.portfolio .project:nth-of-type(odd) {
-  background-color: #fff; 
-}
-.portfolio .project:nth-of-type(even) {
-  background-color: #fff; 
+  padding-left: 10px;
+  line-height: 150%;
+  letter-spacing: .067rem;
 }
 
-.project .about {
-  transform: translateY(20%);
+@media (max-width: 1023px) {
+  /* section.portfolio {
+    display: flex; 
+    flex-direction: column;
+  } */
+
+  .portfolio .about p {
+    font-size: 14px;
+    padding-left: 20px;
+    line-height: 150%;
+    letter-spacing: .067rem;
+  }
+
+  .portfolio .web {
+    padding: 20px; 
+  }
+
+  .portfolio .web img {
+    width: 70%; 
+    display: block; 
+    margin: 0 auto;
+    box-shadow: 6px 6px 5px rgba(0,0,0,0.3);
+  }
 }
 
-.web img {
-  filter: grayscale(0.7);
-  transition: all .5s ease; 
-}
-.web img:hover {
-  filter: grayscale(0);
-}
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (min-width: 1024px) {
   .web,
   .about {
     width: 50%;
@@ -910,11 +935,4 @@ blockquote::before {
     padding-left: 40px;
     line-height: 180%;
   }
-}
-
-/* NAVBAR additional transparent class */ 
-
-
-section#nav-bar.transparent {
-  background-color: rgba(0,0,0,0.8) !important;
 }
