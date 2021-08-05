@@ -14,6 +14,11 @@
   top: 0;
   z-index: 10;
 }
+
+#nav-bar.transparent{
+  background-color: rgba(0,0,0,0.8);
+}
+
 .navbar-brand img {
   padding-left: 30px;
   height: 42px;
@@ -463,7 +468,7 @@ blockquote::before {
   width: 400%;
   height: 100%;
   position: relative;
-  animation: slideshowzzz 24s infinite;
+  animation: slideshowzzz 30s infinite;
 }
 @keyframes slideshowzzz {
   0% {left: 0}
@@ -703,7 +708,7 @@ blockquote::before {
 }
 
 .project .about {
-  transform: translateY(30%);
+  transform: translateY(20%);
 }
 
 .web img {
@@ -757,6 +762,7 @@ blockquote::before {
     margin-bottom: 40px;
   }
 }
+
 @media (orientation: landscape) and (min-width: 1400px) {
   .portfolio h1 {
     font-size: 60px;
@@ -776,4 +782,11 @@ blockquote::before {
     padding-left: 40px;
     line-height: 180%;
   }
+}
+
+/* NAVBAR additional transparent class */ 
+
+
+section#nav-bar.transparent {
+  background-color: rgba(0,0,0,0.8) !important;
 }
