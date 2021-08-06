@@ -715,7 +715,6 @@ blockquote::before {
 }
 
 /* Gallery */
-
 #my-gallery {
   box-sizing: border-box;
   width: 100%; 
@@ -750,8 +749,8 @@ blockquote::before {
 }
 
 #my-gallery .my-images {
-  width: 90%; 
   width: 80%; 
+  max-width: 1024px; 
 }
 
 .my-images img {
@@ -805,13 +804,14 @@ blockquote::before {
 
 @media (min-width: 1024px) {
   #my-gallery .my-images {
-    width: 85%; 
+    width: 70%; 
   }
 
   .my-images a {
     flex-basis: 280px; 
   }
 }
+
 
 /* Clients */ 
 #clients h4 {
