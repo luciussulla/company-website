@@ -23,7 +23,7 @@
   <script src="https://kit.fontawesome.com/2936da3e2d.js" crossorigin="anonymous"></script>
   <link rel="icon" 
       type="image/png" 
-      href="img/logo.png">
+      href="img/logo2.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
   <div id="my-navbar">
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> get rid of this -->
 
-      <a class="navbar-brand" href="#"><img src="img/logo.png" style="height:60px;"></a>
+      <a class="navbar-brand" href="#"><img src="img/logo-copy.jpg" style="height:60px;"></a>
 
       <ul class="my-ul-nav">
         <li class="my-nav-li">
@@ -152,28 +152,28 @@
 
         <div class="col-md-3 text-center">
           <div class="icon"><i class="fas fa-headset"></i></div>
-          <h3>Tłumaczenie Tour Guide</h3>
+          <h3 style="font-size: 1.5rem !important;">Tłumaczenie Tour Guide</h3>
           <p>Tą usługę polecamy klientom, którzy chcą przyjąć gości w fabryce, magazynie lub planują obchód otwartego terenu. Wykorzystanie kabiny w takich warunkach nie jest praktyczne ze względu na konieczność przemieszczania się tłumacza.
           </p>
         </div>
 
         <div class="col-md-3 text-center">
           <div class="icon"><i class="fa fa-comments"></i></div>
-          <h3>Tłumaczenie Symultaniczne</h3>
+          <h3 style="font-size: 1.5rem !important;">Tłumaczenie Symultaniczne</h3>
           <p>Najczęściej wybierana <strong>opcja tłumaczenia kabinowego podczas konferencji</strong>, kongresów oraz eventów, podczas których korzystanie z innych form tłumaczenia nie jest korzystne lub praktyczne. Tłumacze odizolowanie w kabinie tłumaczą treść, która trafia bezpośrednio do obiorców. 
           </p>
         </div>
 
         <div class="col-md-3 text-center">
           <div class="icon"><i class="fa fa-handshake"></i></div>
-          <h3>Tłumaczenie Konsekutywne</h3>
+          <h3 style="font-size: 1.5rem !important;">Tłumaczenie Konsekutywne</h3>
           <p>Istnieje możliwość zamówienia tłumaczenia konsekutywnego, jeśli tłumaczenie wykonywane jest jedynie podczas krótkiej prelekcji lub wystąpienia. 
           </p>
         </div>
 
         <div class="col-md-3 text-center">
           <div class="icon"><i class="fa fa-microphone"></i></div>
-          <h3>Tłumaczenia online </h3>
+          <h3 style="font-size: 1.5rem !important;">Tłumaczenia online </h3>
           <p>Asystujemy również klientom podczas zdalnych rozmów biznesowych w różnych branżach. Podobnie pomagamy w <strong>negocjacjach online</strong> czy rozmowach prowadzonych przez komunikatory i systemu telekonferencyjne oraz podczas prezentacji ofert zagranicznym klientom. 
           </p>
         </div>
@@ -195,13 +195,10 @@
     </div>
   </section>
 
-  <section id="gallery" class="gallery">
-    <div class="my-modal js-modal">
-      <img src="img/dendro.jpg" alt="tlumaczenie symultaniczne">
-      <span>&times;</span>
-    </div>
-    <div class="modal-overlay js-modal-overlay"></div>
-    <div class="images">
+  
+  <div id="my-gallery">
+    <!-- <div class="modal-overlay js-modal-overlay"></div> -->
+    <div class="my-images">
       <a href="img/dendro.jpg" data-lightbox="dendrologia"><img src="img/dendro.jpg" alt="tlumaczenie konferencyjne"></a>
       <a href="img/dng.jpg"    data-lightbox="warszawa"><img src="img/dng.jpg" alt="tlumacz symultaniczny warszawa"></a>
       <a href="img/gdansk.jpg" data-lightbox="gdansk"><img src="img/gdansk.jpg" alt="konfrencja gdansk"></a>
@@ -209,11 +206,11 @@
       <a href="img/sggw.png"   data-lightbox="warszawa_sggw"><img src="img/sggw.png" alt="konsekutywne"></a>
       <a href="img/polsat.jpg" data-lightbox="rzeszow"><img src="img/polsat.jpg" alt="poznan"></a>
     </div>
-  </section>
+  </div>
 	
   <!-- promo -->
   <section id="promo">
-    <div class="container">
+    <div class="my-container">
       <p>Skontaktuj się i zamów tłumaczenie</p>
       <a href="#contact" class="btn btn-primary">Kontakt</a>
     </div>
@@ -399,31 +396,52 @@
     //   });
     //   //js modal span - insert the foto switch off code
     //   // transparent border on scroll 
-      
     // });   
-
+    
+    // MENU SIZE CHANGE AND OPACITY
     let hamburger = document.querySelector('.navbar-button')
     let menu = document.querySelector('.my-ul-nav')
     let navbar = document.querySelector('#my-navbar')
-    console.log(hamburger)
-    console.log(menu)
-    console.log(navbar)
+
+    // REVEAL ELEMENTS ON SCROLL 
+    let first_text = document.querySelector('#about')
+    // let topPositionAbout = first_text.getBoundingClientRect().top
+    let windowTop = window.innerHeight
+    // GALLERY REVELA ON SCROLL 
+    let gallery = document.querySelector('#my-gallery')
+    // let topPositionGallery = gallery.getBoundingClientRect().top
+    let galleryHeader = document.querySelector('.gallery-header')
+    // let topPositionGalleryHeader = galleryHeader.getBoundingClientRect().top
 
     hamburger.addEventListener('click', ()=> {
-      console.log("clicked")
       menu.classList.toggle('hide')
     })
 
     window.addEventListener('scroll', ()=> {
-      console.log(window.scrollY)
+      // console.log(window.scrollY)
       if(window.scrollY>150) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled')
       }
+      
+      // SHOW ABOUT SECTION ON SCROLL 
+      topPositionAbout = first_text.getBoundingClientRect().top
+      topPositionGalleryHeader = galleryHeader.getBoundingClientRect().top
+      topPositionGallery = gallery.getBoundingClientRect().top
+
+      if((windowTop/2)>topPositionAbout) {
+        first_text.classList.add('show-info')
+      }
+      if((windowTop/2)>topPositionGallery) {
+        gallery.classList.add('show-info')
+      } 
+      if((windowTop/2)>topPositionGalleryHeader) {
+        galleryHeader.classList.add('show-info')
+      }
+
     })
-
-
+    
   </script>
   <script src="./js/lightbox-plus-jquery.min.js"></script>
 

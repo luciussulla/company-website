@@ -1,46 +1,31 @@
+/* Table of contents 
+50  - Navbar 
+120 - Navbar dynamic 
+200 - slider 
+220- about 
+230 - services 
+280 - team 
+270 - promo 
+380 - price plan 
+520 - get in touch 
+560 - slide replacement 
+700 - gallery
+720 - Modal (deleted replaced with LIGHTBOX)
+830 - Clients
+840 - PORTFOLIO (with all the projects shown - responsive)
+*/ 
 * {
   margin: 0;
   padding: 0;
 }
+
 
 .clearfix::after {
   content: '';
   clear: both;
   display: block;
 }
-/* 
-OLD NAVBAR 
-#nav-bar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
 
-.navbar-brand img {
-  padding-left: 30px;
-  height: 42px;
-}
-.navbar-nav li {
-  padding: 0 10px;
-}
-.navbar-nav li a {
-  float: right;
-  text-align: left;
-}
-#nav-bar ul li a:hover {
-  color: #007bff!important;
-}
-.navbar {
-  background-color: #fff;
-}
-.navbar-toggler {
-  border: none!important;
-}
-.nav-link {
-  color: #555!important;
-  font-weight: 600;
-  font-size: 16px;
-} */
 
 /* NEW NAVBAR */ 
 #my-navbar {
@@ -48,7 +33,7 @@ OLD NAVBAR
   width: 100%; 
   position: fixed; 
   min-height: 80px; 
-  background-color: #eee;
+  background-color: #fff;
   color: #333; 
   box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 
@@ -56,18 +41,24 @@ OLD NAVBAR
   align-items: center; 
   justify-content: space-between;
   z-index: 10;
-  padding: 0 100px 0 80px; 
+  padding: 20px 90px 20px 70px; 
   transition: all .4s ease;
   /* border: 1px solid red;  */
+  /* display: none;  */
 }
 
 #my-navbar.scrolled {
   opacity: .9; 
-  transform: scale(.9);
+  padding: 0px 100px 0px 80px; 
+}
+
+#my-navbar.scrolled .my-ul-nav li {
+  font-size: 1rem; 
 }
 
 .navbar-brand img {
   height: 42px;
+  margin-bottom: 10px; 
 }
 
 .navbar-button {
@@ -100,8 +91,9 @@ OLD NAVBAR
 }
 
 .my-ul-nav li {
-  /* border: 1px solid red; */
   padding: 0 7px;  
+  font-size: 1.1rem; 
+  transition: font-size .4s ease; 
 }
 
 .my-ul-nav li .my-nav-link {
@@ -111,7 +103,7 @@ OLD NAVBAR
 }
 
 .my-ul-nav li .my-nav-link:hover {
-  color: #fff !important; 
+  color: rgb(69, 79, 225) !important; 
 }
 
 @media (max-width: 900px) {
@@ -124,7 +116,7 @@ OLD NAVBAR
   }
 
   .navbar-brand img {
-    margin-top: 12px;
+    margin: 12px 0 10px 0; 
   }
 
   .navbar-button {
@@ -141,6 +133,15 @@ OLD NAVBAR
     overflow: hidden;  
   }
 
+  .my-ul-nav li {
+    /* border: 1px solid red; */
+    padding: 0 7px;  
+    font-size: .9rem; 
+    padding: 10px; 
+    width: 100%; 
+    text-align: center; 
+  }
+
   .my-ul-nav.hide {
     height: 0px; 
   } 
@@ -149,12 +150,6 @@ OLD NAVBAR
     align-items: center; 
     /* border: 1px solid red;  */
   }
-
-  .my-ul-nav li {
-    padding: 10px; 
-    width: 100%; 
-    text-align: center; 
-  } 
 
   .my-ul-nav li:hover {
     background-color: #bcbcbc;
@@ -178,6 +173,7 @@ OLD NAVBAR
 }
 #slider {
   width: 100%;
+  /* display: none;  */
 }
 .carousel-caption {
   top: 35%;
@@ -189,11 +185,20 @@ OLD NAVBAR
   font-size: 42px;
 }
 /* -- ABOUT */
+
 #about {
   padding-top: 50px;
   padding-bottom: 50px;
   color: #555;
+  opacity: 0; 
+  transition: opacity 3s ease-in-out; 
+  /* display: none;  */
 }
+
+#about.show-info {
+  opacity: 1; 
+}
+
 #about button {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -209,6 +214,19 @@ OLD NAVBAR
   border-radius: 5px;
   margin-bottom: 15px;
 }
+
+@media (max-width: 840px) {
+  #about h1 {
+    font-size: 30px; 
+  }
+}
+
+@media (max-width: 400px) {
+  #about h1{
+    font-size: 20px; 
+  }
+}
+
 /* services */
 #services {
   background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(img/konf1.jpg);
@@ -218,6 +236,7 @@ OLD NAVBAR
   color: #efefef !important;
   padding-top: 50px;
   padding-bottom: 50px;
+  /* display: none;  */
 }
 #services h1 {
   text-align: center;
@@ -255,6 +274,11 @@ OLD NAVBAR
   transition: 0.7s;
 }
 
+@media (max-width: 450px) {
+  #services h1 {
+    font-size: 30px; 
+  }
+}
 
 /*   TEAM --*/
 .img-box {
@@ -268,6 +292,7 @@ OLD NAVBAR
   padding-top: 50px;
   padding-bottom: 50px;
   color: #555;
+  /* display: none;  */
 }
 h1 {
   text-align: center;
@@ -348,9 +373,31 @@ h1::after {
   color: #fff;
   font-family: sans-serif;
   font-size: 38px;
-  padding: 100px;
-  text-align: center;
+  padding: 100px; 
+  text-align: center
 }
+
+#promo .my-contianer {
+  margin: 200px; 
+  padding-top: 200x;
+  padding-bottom: 200px;  
+}
+
+@media (max-width: 840px) {
+  #promo {
+    font-size: 35px; 
+  }
+}
+
+@media (max-width: 400px) {
+  #promo {
+    font-size: 20px; 
+    padding: 50px; 
+  }
+  
+}
+
+
 /** Price PLAN **/
 #price {
   padding: 40px 0;
@@ -483,7 +530,6 @@ blockquote::before {
   right: 5px;
 }
 
-
 .profile:hover {
   box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
   cursor: pointer;
@@ -516,7 +562,8 @@ blockquote::before {
   color: #007bff;
   font-weight: bold;
 }
-/** --------------- Footer ------------*/
+
+/* --------------- Footer ------------*/
 #footer {
     background-color: #333;
     color: #fff;
@@ -526,10 +573,7 @@ blockquote::before {
   margin: 3px;
   color: red;
 }
-
-
 /* Slide replacement */
-
 .slide {
   width: 100%;
   height: 100vh;
@@ -597,16 +641,22 @@ blockquote::before {
 @keyframes slideshowzzz {
   0% {left: 0}
   10% {left:0}
+  
   15%{left: -100%}
   25%{left: -100%}
+
   30%{left: -200%}
   40%{left: -200%}
+
   45%{left: -300%}
   55%{left: -300%}
+
   60%{left: -200%}
   70%{left: -200%}
+
   75%{left: -100%}
   85%{left: -100%}
+
   90%{left: 0}
 }
 .mobile-banner {
@@ -614,10 +664,10 @@ blockquote::before {
 }
 @media(max-width: 700px) {
   .slide-content h3 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .slide-content p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 /* This part can replace slider in mobile viwew, if the slider does not work properly on mobile */
@@ -626,7 +676,8 @@ blockquote::before {
     visibility: hidden;
   }
   .slider-wrapper {
-    height: 50vh;
+    padding-top: 100px; 
+    height: 80vh;
     background: linear-gradient(
       rgba(0,0,0,0.5),
       rgba(0,0,0,0.5)
@@ -637,30 +688,21 @@ blockquote::before {
   .mobile-banner {
     display: block;
   }
-  .mobile-content {
-    margin-top: 60px;
-  }
+
   .mobile-content h2 {
     color: #fff!important ;
     text-align: center;
     font-size: 30px;
   }
   .mobile-content p {
-    width: 60%;
+    width: 70%;
     font-size: 15px;
     margin: 25px auto;
     text-align: center;
     color: #fff;
   }
 }
-
-/* Gallery */
-.gallery h1 {
-  font-size: 30px!important;
-  margin: 30px auto!important;
-  padding: 0 0 30px 0!important;
-}
-
+/* Gallery header */ 
 .gallery-header h3 {
   color: #555555; 
   padding-top: 40px; 
@@ -669,125 +711,134 @@ blockquote::before {
   margin: 30px auto ; 
 }
 
-.gallery {
-  padding: 0;
-  margin: 0 0 100px 0;
-  box-sizing: border-box;
-  position: relative;
-  min-height: 90vh;
-  /*border: 1px solid blue;*/
-}
-.gallery .images {
-  display: flex;
-  align-content:center; /*Zarzadzamy 1% wolnej przestrzeni */
-  flex-wrap: wrap;
-  align-content: space-around;
-  position: absolute;
-  top:5%;
-  right:5%;
-  bottom: 5%;
-  left: 5%;
-  /* border: 1px solid red;  */
-}
-.gallery a {
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
-  position: relative;
-  flex-basis: calc(33% - 40px);
-  flex-grow: 1; /*Jesli jest wolna przestrzen to powieksz te elementy */
-  margin: 0 20px;
-  overflow: hidden;
-  height: 200px; 
-  /* border: 1px solid red;  */
-  display: block; 
+.gallery-header {
+  opacity: 0; 
+  transition: opacity 3s ease-in-out; 
 }
 
-.images img {
-  position: absolute;
-  display: block; 
-  object-fit: cover; 
-  height: 200px; 
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  width: 100%;
-  filter: grayscale(0.7); 
-  transition: all .5s linear;  
-  /*
-  display: block; position absolute juz nam zrobilo blokowy
-  width: 100%; dzieki wysrodkowaniu juz nie potrzebujemy width 100
-  */
+.gallery-header.show-info {
+  opacity: 1;
 }
-.images img:hover {
+
+/* Gallery */
+
+#my-gallery {
+  box-sizing: border-box;
+  width: 100%; 
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  margin-bottom: 50px; 
+}
+
+#my-gallery.show-info {
+  opacity: 1; 
+}
+
+#my-gallery .my-images {
+  margin: 0 auto; 
+}
+
+.my-images img:hover {
   filter: grayscale(0);
   transform: scale(1.2);
 }
-/* Modal */
-.my-modal {
-  border-bottom-left-radius: 4px!important;
-  border-bottom-right-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.75);
-  display: block;
-  top: -30px;
-  left: 50%; /* of the broserw window */
-  transform: translate(-50%, 60%);
-  transition: 0.4s ease-in-out;
-  opacity: 0;
-  position: absolute;
-  visibility: hidden;
-  width: 800px;
-  z-index: 100;
-}
-.my-modal.is-visible {
-  opacity: 1;
-  transform: translate(-50%, 30%);
-  visibility: visible;
-}
-.my-modal.js-modal span {
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 30px;
-  color: white;
-}
-.my-modal img {
-  width: 100%;
-  display: block;
-}
-.modal-overlay {
-  background-color: #212121;
-  bottom:0;
-  height: 100%;
-  left:0;
-  opacity: 0;
-  position: fixed;
-  right:0;
-  top: 0;
-  width: 100%;
-  visibility: hidden;
-  z-index: 99;
-}
-.modal-overlay.is-visible {
-  opacity: 0.4;
-  visibility: visible;
-}
-/* Clients */ 
 
+.my-images img {
+  display: block; 
+  filter: grayscale(0.7); 
+  transition: all .5s linear;  
+  width: 100%; 
+  padding: 15px 0; 
+}
+
+.my-images a {
+  display: block; 
+}
+
+#my-gallery .my-images {
+  width: 90%; 
+  width: 80%; 
+}
+
+.my-images img {
+  width: 100%; 
+  /* padding: 15px 0;  */
+}
+
+@media (max-width: 360px) {
+
+
+  .my-images a {
+    display: block; 
+  }
+
+  #my-gallery .my-images {
+    width: 90%; 
+
+    width: 80%; 
+  }
+
+  .my-images img {
+    width: 100%; 
+    /* padding: 15px 0;  */
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 460px) {
+  #my-gallery .my-images {
+    width: 70%; 
+    margin: 0 auto;
+    padding: 30px 0; 
+
+  }
+} 
+
+@media (min-width: 760px) {
+
+  #my-gallery .my-images {
+    display: flex; 
+    flex-wrap: wrap; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .my-images a {
+    flex-basis: 300px; 
+  }
+
+}
+
+@media (min-width: 1024px) {
+  #my-gallery .my-images {
+    width: 85%; 
+  }
+
+  .my-images a {
+    flex-basis: 280px; 
+  }
+}
+
+/* Clients */ 
 #clients h4 {
   margin-top: 100px; 
   text-align: center;
   color: #555555 !important;
   font-size: 40px;
 }
-.clients-image {
-  width: 800px;
+
+.container .clients-image {
+  width: 80%;
   padding-top: 120px; 
   padding-bottom: 60px; 
   margin: 0 auto; 
 }
+
 .clients-image img {
   width: 100%; 
 }
+
 
 /* New stuff */
 .portfolio {
@@ -871,7 +922,6 @@ blockquote::before {
   }
 }
 
-
 @media (orientation: landscape) and (min-width: 1024px) {
   .web,
   .about {
@@ -898,14 +948,14 @@ blockquote::before {
 
 @media (min-width: 768px) and (orientation: portrait) {
   .portfolio h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .portfolio .about h2 {
     font-size: 28px;
     border-bottom: 2px solid white;
     margin-bottom: 12px;
     padding-bottom: 6px;
-    text-indent: 40px;
+    /* text-indent: 40px; */
   }
   .portfolio .about p {
     font-size: 18px;
@@ -936,3 +986,25 @@ blockquote::before {
     line-height: 180%;
   }
 }
+
+@media (max-width: 600px) {
+  .portfolio h1 {
+    font-size: 20px; 
+  }
+
+  .portfolio .web img {
+    width: 100%; 
+    display: block; 
+    margin: 0 auto;
+    box-shadow:none;
+  }
+  .portfolio .web {
+    padding: 0px; 
+  }
+}
+
+/* @media (max-width: 290px) {
+  h1, h2, h3 {
+    font-size: 1rem; 
+  }
+} */
